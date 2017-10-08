@@ -10,3 +10,6 @@
 [submodule "pack/plugins/start/vim-ruby"]
 	path = pack/plugins/start/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby
+[submodule "pack/plugins/start/ale"]
+	path = pack/plugins/start/ale
+	url = https://github.com/w0rp/ale
