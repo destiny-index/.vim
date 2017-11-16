@@ -7,6 +7,3 @@
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/w0rp/ale
-[submodule "pack/plugins/start/vim-rtags"]
-	path = pack/plugins/start/vim-rtags
-	url = https://github.com/lyuts/vim-rtags
