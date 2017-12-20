@@ -17,7 +17,8 @@ let g:ale_cpp_clangtidy_options='-std=c++14'
 
 augroup Javascript
   autocmd!
-  autocmd FileType javascript setlocal suffixesadd=.js
+  autocmd BufRead,BufNewFile *.mjs set filetype=javascript
+  autocmd FileType javascript setlocal suffixesadd=.js,/index.js
 augroup END
 
 augroup Cpp
