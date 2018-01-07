@@ -1,10 +1,8 @@
-source $VIMRUNTIME/defaults.vim
-
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-set hidden
 set background=dark
+set hidden
 set exrc
 
 let mapleader = "-"
