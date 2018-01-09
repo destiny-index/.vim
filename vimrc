@@ -18,6 +18,8 @@ let g:ale_cpp_clangtidy_options='-std=c++14'
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 
 augroup Javascript
   autocmd!
