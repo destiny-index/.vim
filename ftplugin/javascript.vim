@@ -1,5 +1,5 @@
 setlocal suffixesadd=.js,/index.js
 
-nnoremap <buffer> <leader>fd :FlowJumpToDef
-nnoremap <buffer> <leader>fm :FlowMake
-nnoremap <buffer> <leader>ft :FlowType
+nnoremap <buffer> <localleader>fd :FlowJumpToDef
+nnoremap <buffer> <localleader>fm :FlowMake
+nnoremap <buffer> <localleader>ft :FlowType
