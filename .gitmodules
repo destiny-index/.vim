@@ -2,7 +2,7 @@
 	path = pack/plugins/start/vim-flow
 	url = git://github.com/flowtype/vim-flow.git
 [submodule "pack/plugins/start/tern_for_vim"]
-	path = pack/plugins/start/tern_for_vim
+	path = pack/plugins/opt/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
