@@ -23,6 +23,7 @@ let g:jsx_ext_required = 0
 
 " vim-flow
 let g:flow#autoclose = 1
+let g:flow#enable = 0
 let g:flow#showquickfix = 0
 
 " ale
