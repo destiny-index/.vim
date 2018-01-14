@@ -31,7 +31,9 @@ let g:flow#enable = 0
 let g:flow#showquickfix = 0
 
 " ale
-let g:ale_cpp_clangtidy_options='-std=c++14'
+let g:ale_cpp_clangtidy_options = '-std=c++14'
+let g:ale_cpp_gcc_options = '-std=c++14 -Wall -I' . $HOME . '/.node/include/node'
+let g:ale_cpp_clang_options = '-std=c++14 -Wall -I' . $HOME. '/.node/include/node'
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
