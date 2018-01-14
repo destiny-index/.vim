@@ -8,6 +8,10 @@ set background=dark
 set hidden
 set exrc
 
+if has("nvim")
+  tnoremap <C-w> <C-\><C-n><C-w>
+endif
+
 let mapleader = "-"
 let maplocalleader = "\\"
 
