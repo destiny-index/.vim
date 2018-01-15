@@ -1,4 +1,4 @@
-setlocal formatprg=clang-format
+setlocal formatprg=clang-format\ -style=Chromium
 
 nnoremap <silent> <buffer> <localleader>cs :CSearch<cr>
 nnoremap <silent> <buffer> <localleader>csc :CSearchContext<cr>
