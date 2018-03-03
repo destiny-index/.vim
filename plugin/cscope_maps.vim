@@ -89,6 +89,7 @@ if has("cscope")
     "
 
     nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-\>a :cs find a <C-R>=expand("<cword>")<CR><CR>	
     nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
     nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
     nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
@@ -107,6 +108,7 @@ if has("cscope")
     "    nmap <C-@>s <C-W><C-S> :cs find s <C-R>=expand("<cword>")<CR><CR>	
 
     nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-@>a :scs find a <C-R>=expand("<cword>")<CR><CR>	
     nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>	
     nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>	
     nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>	
@@ -123,6 +125,7 @@ if has("cscope")
     " if you prefer the new window on the right instead of the left
 
     nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>a :vert scs find a <C-R>=expand("<cword>")<CR><CR>
     nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
     nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
     nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
