@@ -29,4 +29,4 @@ let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 
 " ALE
-let g:ale_echo_msg_format = '%linter% says %s'
+let g:ale_echo_msg_format = '%linter% - %s'
