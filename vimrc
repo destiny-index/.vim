@@ -30,3 +30,6 @@ let g:rubycomplete_rails = 1
 
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
+
+" vim-flow
+let g:flow#showquickfix = 0
