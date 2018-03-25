@@ -1,2 +1,2 @@
-setlocal suffixesadd=.js
+setlocal suffixesadd=.js,.mjs
 
