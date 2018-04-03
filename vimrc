@@ -33,3 +33,5 @@ let g:ale_echo_msg_format = '%linter% - %s'
 
 " vim-flow
 let g:flow#showquickfix = 0
+
+nnoremap <F4> :%s/\s\+$//e
