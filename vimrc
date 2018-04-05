@@ -9,6 +9,12 @@ set background=dark
 set hidden
 set exrc
 
+" Ensure CRLF is saved as LF
+set ff=unix
+
+" Remove trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+
 if has("nvim")
   tnoremap <C-w> <C-\><C-n><C-w>
 endif
@@ -33,5 +39,3 @@ let g:ale_echo_msg_format = '%linter% - %s'
 
 " vim-flow
 let g:flow#showquickfix = 0
-
-nnoremap <F4> :%s/\s\+$//e
