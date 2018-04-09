@@ -32,8 +32,11 @@ let g:rubycomplete_rails = 1
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
 
-" flow-language-server
+" LanguageClient
 let g:LanguageClient_serverCommands = {
 \ 'javascript': ['flow-language-server', '--stdio'],
 \ }
 let g:LanguageClient_autoStart = 1
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
