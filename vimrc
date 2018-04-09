@@ -32,5 +32,8 @@ let g:rubycomplete_rails = 1
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
 
-" vim-flow
-let g:flow#showquickfix = 0
+" flow-language-server
+let g:LanguageClient_serverCommands = {
+\ 'javascript': ['flow-language-server', '--stdio'],
+\ }
+let g:LanguageClient_autoStart = 1
