@@ -9,11 +9,9 @@ set background=dark
 set hidden
 set exrc
 
-" Ensure CRLF is saved as LF
-set ff=unix
-
 " Remove trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritePre * %s/\r/\r/e
 
 if has("nvim")
   tnoremap <C-w> <C-\><C-n><C-w>
