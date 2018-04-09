@@ -24,9 +24,6 @@ let maplocalleader = "\\"
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 
-" vim-jsx
-let g:jsx_ext_required = 0
-
 " vim-ruby
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
