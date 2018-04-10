@@ -11,5 +11,5 @@
 	path = pack/plugins/start/vim-jsx
 	url = https://github.com/mxw/vim-jsx
 [submodule "pack/plugins/start/LanguageClient-neovim"]
-	path = pack/plugins/start/LanguageClient-neovim
+	path = pack/plugins/start/language-client-neovim
 	url = https://github.com/autozimu/LanguageClient-neovim
