@@ -30,3 +30,8 @@ let g:LanguageClient_serverCommands = {
 \ 'javascript': ['flow-language-server','--stdio'],
 \ 'javascript.jsx': ['flow-language-server','--stdio'],
 \ }
+
+command WQ wq
+command Wq wq
+command W w
+command Q q
