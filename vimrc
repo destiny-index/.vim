@@ -2,16 +2,9 @@
 runtime defaults.vim
 
 set nohlsearch
-set expandtab
-set shiftwidth=2
-set softtabstop=2
 set background=dark
 set hidden
 set exrc
-
-" Remove trailing whitespace
-autocmd BufWritePre * %s/\s\+$//e
-autocmd BufWritePre * %s/\r/\r/e
 
 if has("nvim")
   tnoremap <C-w> <C-\><C-n><C-w>
@@ -33,8 +26,7 @@ let g:rubycomplete_rails = 1
 let g:ale_echo_msg_format = '%linter% - %s'
 
 " LanguageClient
-let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {
-\ 'javascript': ['language-server-stdio'],
-\ 'javascript.jsx': ['language-server-stdio'],
+\ 'javascript': ['flow-language-server','--stdio'],
+\ 'javascript.jsx': ['flow-language-server','--stdio'],
 \ }
