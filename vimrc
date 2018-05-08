@@ -6,6 +6,10 @@ set background=dark
 set hidden
 set exrc
 
+set expandtab
+set shiftwidth=2
+set tabstop=2
+
 if has("nvim")
   tnoremap <C-w> <C-\><C-n><C-w>
 endif
