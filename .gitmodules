@@ -13,3 +13,6 @@
 [submodule "pack/plugins/start/LanguageClient-neovim"]
 	path = pack/plugins/start/language-client-neovim
 	url = https://github.com/autozimu/LanguageClient-neovim
+[submodule "pack/plugins/start/typescript-vim"]
+	path = pack/plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
