@@ -4,5 +4,5 @@ autocmd BufWritePre <buffer> %s/\s\+$//e
 autocmd BufWritePre <buffer> %s/\r/\r/e
 
 " Language Server Mappings
-nnoremap <silent> <localleader>g :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <localleader>c :call LanguageClient_textDocument_references()<CR>
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
