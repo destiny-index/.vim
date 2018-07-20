@@ -29,12 +29,6 @@ let g:rubycomplete_rails = 1
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
 
-" LanguageClient
-let g:LanguageClient_serverCommands = {
-\ 'javascript': ['flow-language-server','--stdio'],
-\ 'javascript.jsx': ['flow-language-server','--stdio'],
-\ }
-
 " Avoid loading .ts files as Qt Linguist files
 autocmd BufRead,BufNewFile *.ts let b:did_ftplugin = 1
 
