@@ -33,7 +33,6 @@ let g:ale_echo_msg_format = '%linter% - %s'
 let g:LanguageClient_serverCommands = {
 \ 'javascript': ['flow-language-server','--stdio'],
 \ 'javascript.jsx': ['flow-language-server','--stdio'],
-\ 'typescript': ['javascript-typescript-stdio'],
 \ }
 
 " Avoid loading .ts files as Qt Linguist files
