@@ -29,9 +29,6 @@ let g:rubycomplete_rails = 1
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
 
-" Avoid loading .ts files as Qt Linguist files
-autocmd BufRead,BufNewFile *.ts let b:did_ftplugin = 1
-
 command WQ wq
 command Wq wq
 command W w
