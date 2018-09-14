@@ -28,6 +28,7 @@ let g:rubycomplete_rails = 1
 
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
+let g:ale_kotlin_kotlinc_options = '-d /tmp'
 
 command WQ wq
 command Wq wq
