@@ -16,3 +16,6 @@
 [submodule "pack/plugins/start/kotlin-vim"]
 	path = pack/plugins/start/kotlin-vim
 	url = https://github.com/udalov/kotlin-vim
+[submodule "pack/plugins/start/vader.vim"]
+	path = pack/plugins/start/vader
+	url = git@github.com:junegunn/vader.vim.git
