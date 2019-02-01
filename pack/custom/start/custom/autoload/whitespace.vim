@@ -1,6 +1,6 @@
-function! RemoveTrailingWhitespace()
+function! whitespace#removetrailing()
   " Remove trailing whitespace
-  normal! ":%s/\s\+$//e"
+  execute ':%s/\s\+$//e'
   " Convert CR to LF
-  normal! ":%s/\r/\r/e"
+  execute ':%s/\r/\r/e'
 endfunction
