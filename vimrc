@@ -10,6 +10,12 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 
+if has('persistent_undo')
+  call mkdir($HOME . '/.vim/undo', 'p')
+  set undofile
+  set undodir=$HOME/.vim/undo
+endif
+
 if has('nvim')
   tnoremap <C-w> <C-\><C-n><C-w>
 endif
