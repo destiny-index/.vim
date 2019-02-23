@@ -3,4 +3,4 @@ augroup ftplugin_xml
   autocmd BufWritePre <buffer> call whitespace#removetrailing()
 augroup END
 
-setlocal formatprg=xmllint\ --format -
+setlocal formatprg=xmllint\ --format\ -
