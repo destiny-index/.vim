@@ -36,6 +36,11 @@ let g:rubycomplete_rails = 1
 let g:ale_echo_msg_format = '%linter% - %s'
 let g:ale_kotlin_kotlinc_options = '-d /tmp'
 
+augroup trim_trailing_whitespace
+  autocmd!
+  autocmd BufWritePre <buffer> call whitespace#removetrailing()
+augroup END
+
 command WQ wq
 command Wq wq
 command W w
