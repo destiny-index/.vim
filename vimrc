@@ -45,3 +45,6 @@ command WQ wq
 command Wq wq
 command W w
 command Q q
+
+nmap <F1> <nop>
+imap <F1> <nop>
