@@ -11,7 +11,10 @@ set shiftwidth=2
 set tabstop=2
 
 if has('persistent_undo')
-  call mkdir($HOME . '/.vim/undo', 'p')
+  if !isdirectory($HOME. '/.vim/undo')
+    call mkdir($HOME . '/.vim/undo', 'p')
+  endif
+
   set undofile
   set undodir=$HOME/.vim/undo
 endif
@@ -22,6 +25,8 @@ endif
 
 let mapleader = '-'
 let maplocalleader = '\'
+
+nnoremap <leader>g :grep <cword> -R *<CR>
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
@@ -41,10 +46,10 @@ augroup trim_trailing_whitespace
   autocmd BufWritePre <buffer> call whitespace#removetrailing()
 augroup END
 
-command WQ wq
-command Wq wq
-command W w
-command Q q
+command! WQ wq
+command! Wq wq
+command! W w
+command! Q q
 
 nmap <F1> <nop>
 imap <F1> <nop>
