@@ -53,3 +53,5 @@ command! Q q
 
 nmap <F1> <nop>
 imap <F1> <nop>
+
+command! ForceWrite :write !sudo tee %
