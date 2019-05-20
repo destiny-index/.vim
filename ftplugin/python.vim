@@ -1,1 +1,1 @@
-nnoremap gpt :execute "edit " . python#unittestpath()<CR>
+nnoremap <localleader>t :execute "edit " . python#unittestpath()<CR>

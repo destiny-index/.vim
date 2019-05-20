@@ -1,7 +1,7 @@
 " My own vimrc
 runtime defaults.vim
 
-set nohlsearch
+set hlsearch
 set background=dark
 set hidden
 set exrc
@@ -26,7 +26,7 @@ endif
 let mapleader = '-'
 let maplocalleader = '\'
 
-nnoremap <leader>g :grep <cword> -R *<CR>
+nnoremap <leader>g :grep <cword> -IR *<CR>
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
@@ -51,7 +51,7 @@ command! Wq wq
 command! W w
 command! Q q
 
-nmap <F1> <nop>
-imap <F1> <nop>
+map <F1> <nop>
+nnoremap <Esc> :noh<CR>
 
 command! ForceWrite :write !sudo tee %
