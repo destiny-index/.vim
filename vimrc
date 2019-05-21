@@ -26,7 +26,27 @@ endif
 let mapleader = '-'
 let maplocalleader = '\'
 
-nnoremap <leader>g :grep <cword> -IR *<CR>
+nnoremap <leader>g :grep <cword> --exclude tags -I -R *<CR>
+
+augroup trim_trailing_whitespace
+  autocmd!
+  autocmd BufWritePre <buffer> call whitespace#removetrailing()
+augroup END
+
+augroup reload_init_vim
+  autocmd!
+  autocmd! BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
+
+command! WQ wq
+command! Wq wq
+command! W w
+command! Q q
+command! ForceWrite :write !sudo tee %
+
+map <F1> <nop>
+nnoremap <Esc> :noh<CR>
+nnoremap <F12> :split $MYVIMRC<CR>
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
@@ -41,17 +61,3 @@ let g:rubycomplete_rails = 1
 let g:ale_echo_msg_format = '%linter% - %s'
 let g:ale_kotlin_kotlinc_options = '-d /tmp'
 
-augroup trim_trailing_whitespace
-  autocmd!
-  autocmd BufWritePre <buffer> call whitespace#removetrailing()
-augroup END
-
-command! WQ wq
-command! Wq wq
-command! W w
-command! Q q
-
-map <F1> <nop>
-nnoremap <Esc> :noh<CR>
-
-command! ForceWrite :write !sudo tee %
