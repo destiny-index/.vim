@@ -1,6 +1,12 @@
 function! python#run_test()
-  let path = s:convert_path_to_module(python#toggle_unittest_path())
-  execute '!eval $(cat .env || echo "") python -m unittest' path
+  if s:is_unittest()
+    let path = expand('%:.')
+  else
+    let path = python#toggle_unittest_path()
+  endif
+
+  let module = s:convert_path_to_module(path)
+  execute '!eval $(cat .env || echo "") python -m unittest' module
 endfunction
 
 function! python#toggle_unittest_path()
@@ -15,11 +21,11 @@ function! s:is_unittest()
 endfunction
 
 function! s:script_path()
-  return expand('%:~:.:h') . '/' . substitute(expand('%:t'), 'test_', '', '')
+  return expand('%:.:h') . '/' . substitute(expand('%:t'), 'test_', '', '')
 endfunction
 
 function! s:unittest_path()
-  return expand('%:~:.:h') . '/' . 'test_' . expand('%:t')
+  return expand('%:.:h') . '/' . 'test_' . expand('%:t')
 endfunction
 
 function! s:convert_path_to_module(path)
