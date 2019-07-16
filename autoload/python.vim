@@ -6,7 +6,7 @@ function! python#run_test()
   endif
 
   let module = s:convert_path_to_module(path)
-  execute '!eval $(cat .env || echo "") python -m unittest' module
+  execute '!eval $(cat .env || echo "") python -m unittest -v' module
 endfunction
 
 function! python#toggle_unittest_path()
