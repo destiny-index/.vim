@@ -28,14 +28,10 @@ let maplocalleader = '\'
 
 nnoremap <leader>g :grep <cword> --exclude tags -I -R *<CR>
 
-augroup trim_trailing_whitespace
+augroup vimrc
   autocmd!
-  autocmd BufWritePre <buffer> call whitespace#removetrailing()
-augroup END
-
-augroup reload_init_vim
-  autocmd!
-  autocmd! BufWritePost $MYVIMRC source $MYVIMRC
+  autocmd BufWritePre * call whitespace#removetrailing()
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
 command! WQ wq
@@ -44,7 +40,8 @@ command! W w
 command! Q q
 command! ForceWrite :write !sudo tee %
 
-map <F1> <nop>
+map <F1> <Nop>
+map! <F1> <Nop>
 nnoremap <silent> <Esc> :noh<CR>
 nnoremap <F12> :split $MYVIMRC<CR>
 
