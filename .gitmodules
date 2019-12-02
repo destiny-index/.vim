@@ -19,3 +19,9 @@
 [submodule "pack/plugins/start/vader.vim"]
 	path = pack/plugins/start/vader
 	url = git@github.com:junegunn/vader.vim.git
+[submodule "pack/plugins/start/erlang-motions.vim"]
+	path = pack/plugins/start/erlang-motions.vim
+	url = https://github.com/edkolev/erlang-motions.vim
+[submodule "pack/plugins/start/coq.vim"]
+	path = pack/plugins/start/coq.vim
+	url = https://github.com/jvoorhis/coq.vim
