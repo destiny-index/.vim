@@ -9,6 +9,8 @@ set exrc
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set ignorecase
+set smartcase
 
 if has('persistent_undo')
   if !isdirectory($HOME. '/.vim/undo')
