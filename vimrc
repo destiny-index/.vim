@@ -5,6 +5,7 @@ set hlsearch
 set background=dark
 set hidden
 set exrc
+set path+=**
 
 set expandtab
 set shiftwidth=2
