@@ -1,5 +1,5 @@
 " My own vimrc
-runtime defaults.vim
+" runtime defaults.vim
 
 set hlsearch
 set background=dark
