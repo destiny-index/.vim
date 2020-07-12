@@ -1,0 +1,5 @@
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base
+default-extensions: OverloadedStrings
+-}
