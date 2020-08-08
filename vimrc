@@ -29,7 +29,7 @@ endif
 let mapleader = '-'
 let maplocalleader = '\'
 
-nnoremap <leader>g :grep <cword> --exclude tags -I -R *<CR>
+nnoremap <leader>g :grep <cword> --exclude=tags --exclude-dir=node_modules --exclude-dir=build -I -R *<CR>
 
 augroup vimrc
   autocmd!
@@ -65,3 +65,4 @@ let g:ale_echo_msg_format = '%linter% - %s'
 let g:ale_completion_enabled = 1
 let g:ale_completion_tsserver_autoimport = 1
 set omnifunc=ale#completion#OmniFunc
+set completeopt=menu,menuone,preview,noselect,noinsert
