@@ -1,6 +1,3 @@
-" My own vimrc
-" runtime defaults.vim
-
 set hlsearch
 set background=dark
 set hidden
@@ -11,6 +8,8 @@ set shiftwidth=2
 set tabstop=2
 set ignorecase
 set smartcase
+
+filetype plugin on
 
 if has('persistent_undo')
   if !isdirectory($HOME. '/.vim/undo')
