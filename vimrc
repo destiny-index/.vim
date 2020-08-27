@@ -62,5 +62,4 @@ let g:polyglot_disabled = ['v']
 let g:ale_echo_msg_format = '%linter% - %s'
 let g:ale_completion_enabled = 1
 let g:ale_completion_tsserver_autoimport = 1
-set omnifunc=ale#completion#OmniFunc
 set completeopt=menu,menuone,preview,noselect,noinsert
