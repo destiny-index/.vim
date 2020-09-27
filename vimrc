@@ -10,7 +10,6 @@ set tabstop=2
 set scrolloff=5
 set ignorecase
 set smartcase
-
 filetype plugin on
 
 if has('persistent_undo')
@@ -29,7 +28,8 @@ endif
 let mapleader = '-'
 let maplocalleader = '\'
 
-nnoremap <leader>g :grep <cword> --exclude=tags --exclude-dir=node_modules --exclude-dir=build -I -R *<CR>
+set grepprg=git\ grep\ -n\ $*
+nnoremap <leader>g :grep -I <cword><CR>
 
 augroup vimrc
   autocmd!
