@@ -11,7 +11,8 @@ set tabstop=2
 set scrolloff=5
 set ignorecase
 set smartcase
-filetype plugin on
+
+filetype plugin indent on
 
 if has('persistent_undo')
   if !isdirectory($HOME. '/.vim/undo')
