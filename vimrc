@@ -31,7 +31,7 @@ let mapleader = '-'
 let maplocalleader = '\'
 
 set grepprg=git\ grep\ -n\ $*
-nnoremap <leader>g :grep -I <cword><CR>
+nnoremap <leader>g :grep -I -w <cword><CR>
 
 augroup vimrc
   autocmd!
