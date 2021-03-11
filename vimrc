@@ -14,7 +14,7 @@ set smartcase
 filetype plugin indent on
 
 if has('persistent_undo')
-  if !isdirectory($HOME. '/.vim/undo')
+  if !isdirectory($HOME . '/.vim/undo')
     call mkdir($HOME . '/.vim/undo', 'p')
   endif
 
@@ -29,7 +29,10 @@ endif
 let mapleader = '-'
 let maplocalleader = '\'
 
-set grepprg=git\ grep\ -n\ $*
+if isdirectory('.git')
+  set grepprg=git\ grep\ -n\ $*
+endif
+
 nnoremap <leader>g :grep -I -w <cword><CR>
 
 augroup vimrc
