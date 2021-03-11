@@ -14,12 +14,12 @@ set smartcase
 filetype plugin indent on
 
 if has('persistent_undo')
-  if !isdirectory($HOME . '/.vim/undo')
-    call mkdir($HOME . '/.vim/undo', 'p')
+  if !isdirectory($HOME . '/.cache/vim/undo')
+    call mkdir($HOME . '/.cache/vim/undo', 'p')
   endif
 
   set undofile
-  set undodir=$HOME/.vim/undo
+  set undodir=$HOME/.cache/vim/undo
 endif
 
 if has('nvim')
