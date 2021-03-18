@@ -1,1 +1,1 @@
-set includeexpr=set includeexpr=substitute(v:fname,'^/','','')
+set includeexpr=substitute(v:fname,'^/','','')
