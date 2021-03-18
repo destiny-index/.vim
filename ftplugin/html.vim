@@ -1,1 +1,1 @@
-nnoremap <localleader>r :silent !xdotool key --window $(xdotool search --name "Mozilla Firefox" \| head --lines=1) F5<CR>
+nnoremap <localleader>r :silent !xdotool search --onlyvisible --name "Mozilla Firefox" key F5<CR>
