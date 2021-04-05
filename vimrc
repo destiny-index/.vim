@@ -6,6 +6,7 @@ set path+=**
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set list
 
 set scrolloff=5
 set ignorecase
