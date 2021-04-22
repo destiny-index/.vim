@@ -25,6 +25,10 @@ endif
 
 if has('nvim')
   tnoremap <C-w> <C-\><C-n><C-w>
+
+  augroup nvimrc
+    autocmd TermOpen * startinsert
+  augroup END
 endif
 
 let mapleader = '-'
