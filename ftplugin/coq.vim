@@ -1,1 +1,1 @@
-nnoremap <F10> :!coqc %<CR>
+nnoremap <buffer> <LocalLeader>r :!coqc %<CR>

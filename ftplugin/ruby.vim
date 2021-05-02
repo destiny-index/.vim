@@ -6,5 +6,5 @@ function <SID>run_script() abort
 	endif
 endfunction
 
-nnoremap <F10> :call <SID>run_script()<CR>
-nnoremap <F11> :!rake test TEST=%<CR>
+nnoremap <buffer> <LocalLeader>r :call <SID>run_script()<CR>
+nnoremap <buffer> <LocalLeader>t :!rake test TEST=%<CR>
