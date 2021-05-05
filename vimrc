@@ -12,6 +12,8 @@ set scrolloff=5
 set ignorecase
 set smartcase
 
+set completeopt=menu,menuone,preview,noselect,noinsert
+
 filetype plugin indent on
 
 if has('persistent_undo')
@@ -71,4 +73,3 @@ let g:polyglot_disabled = ['v']
 
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
-set completeopt=menu,menuone,preview,noselect,noinsert
