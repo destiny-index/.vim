@@ -71,6 +71,4 @@ let g:polyglot_disabled = ['v']
 
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
-let g:ale_disable_lsp = 1
-let g:ale_completion_enabled = 1
 set completeopt=menu,menuone,preview,noselect,noinsert
