@@ -33,14 +33,14 @@ if has('nvim')
   augroup END
 endif
 
-let mapleader = '-'
+let mapleader = '\'
 let maplocalleader = '\'
 
 if isdirectory('.git')
   set grepprg=git\ grep\ -n\ $*
 endif
 
-nnoremap <leader>g :grep -I -w <cword><CR>
+nnoremap <Leader>g :grep -I -w <cword><CR>
 
 augroup vimrc
   autocmd!
@@ -73,3 +73,13 @@ let g:polyglot_disabled = ['v']
 
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
+
+" Conqueror of Completion
+nnoremap <silent><nowait> <LocalLeader>d  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <LocalLeader>e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <LocalLeader>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <LocalLeader>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <LocalLeader>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <LocalLeader>j  :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <LocalLeader>k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <LocalLeader>p  :<C-u>CocListResume<CR>
