@@ -29,6 +29,7 @@ if has('nvim')
   tnoremap <C-w> <C-\><C-n><C-w>
 
   augroup nvimrc
+    autocmd!
     autocmd TermOpen * startinsert
   augroup END
 endif
