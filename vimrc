@@ -57,7 +57,6 @@ command! ForceWrite :write !sudo tee %
 
 map <F1> <Nop>
 map! <F1> <Nop>
-nnoremap <silent> <Esc> :noh<CR>
 nnoremap <F12> :split $MYVIMRC<CR>
 
 " vim-javascript
