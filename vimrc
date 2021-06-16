@@ -70,6 +70,7 @@ let g:rubycomplete_rails = 1
 
 " vim-polyglot
 let g:polyglot_disabled = ['v']
+packadd vim-polyglot
 
 " ALE
 let g:ale_echo_msg_format = '%linter% - %s'
