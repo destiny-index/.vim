@@ -37,11 +37,11 @@ endif
 let mapleader = '\'
 let maplocalleader = '\'
 
-if isdirectory('.git')
+if !empty(glob('.git'))
   set grepprg=git\ grep\ -n\ $*
 endif
 
-nnoremap <Leader>g :grep -I -w <cword><CR>
+nnoremap <silent> <LocalLeader>g :grep! -I -w <cword><CR>:copen<CR>
 
 augroup vimrc
   autocmd!
