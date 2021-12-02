@@ -1,1 +1,1 @@
-nnoremap <buffer> <LocalLeader> :!pdflatex %<CR>
+nnoremap <buffer> <LocalLeader>r :!pdflatex %<CR>
