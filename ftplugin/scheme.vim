@@ -1,1 +1,1 @@
-nnoremap <buffer> <LocalLeader>r :!guile -s %<CR>
+nnoremap <buffer> <LocalLeader>r :!guile -x .guile.sls -x .sls -s %<CR>

@@ -8,3 +8,6 @@ endif
 let b:ale_linters = ['clang', 'gcc', 'cppcheck']
 let b:ale_c_clang_options = '-std=gnu99 -Wall ' . g:ale_c_include_flags
 let b:ale_c_gcc_options = '-std=gnu99 -Wall ' . g:ale_c_include_flags
+
+nnoremap <buffer> <LocalLeader>r :sp \| term make run<CR>
+nnoremap <buffer> <LocalLeader>t :sp \| term make test<CR>
