@@ -93,6 +93,7 @@ if has('nvim')
     Plug 'jvoorhis/coq.vim'
     Plug 'edkolev/erlang-motions.vim'
     Plug 'sheerun/vim-polyglot'
+    Plug 'tpope/vim-fugitive'
   call plug#end()
 endif
 
