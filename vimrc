@@ -76,15 +76,14 @@ let g:ale_echo_msg_format = '%linter% - %s'
 
 " Vim Plug
 if has('nvim')
-  let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-  let plugin_dir = has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged'
+  let vim_plug = stdpath('data') . '/site/autoload/plug.vim'
 
-  if empty(glob(data_dir . '/autoload/plug.vim'))
-    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  if empty(glob(vim_plug))
+    silent execute '!curl -fLo ' . vim_plug . ' --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
   endif
 
-  call plug#begin(plugin_dir)
+  call plug#begin(stdpath('data') . '/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/vader.vim'
@@ -94,32 +93,33 @@ if has('nvim')
     Plug 'edkolev/erlang-motions.vim'
     Plug 'sheerun/vim-polyglot'
     Plug 'tpope/vim-fugitive'
+    Plug 'pbrisbin/vim-syntax-shakespeare'
   call plug#end()
 endif
 
 " Conqueror of Completion
-nnoremap <silent><nowait> <LocalLeader>d  :<C-u>CocList diagnostics<cr>
-nnoremap <silent><nowait> <LocalLeader>e  :<C-u>CocList extensions<cr>
-nnoremap <silent><nowait> <LocalLeader>c  :<C-u>CocList commands<cr>
-nnoremap <silent><nowait> <LocalLeader>o  :<C-u>CocList outline<cr>
-nnoremap <silent><nowait> <LocalLeader>s  :<C-u>CocList -I symbols<cr>
-nnoremap <silent><nowait> <LocalLeader>j  :<C-u>CocNext<CR>
-nnoremap <silent><nowait> <LocalLeader>k  :<C-u>CocPrev<CR>
-nnoremap <silent><nowait> <LocalLeader>p  :<C-u>CocListResume<CR>
-
+" nnoremap <silent><nowait> <LocalLeader>d  :<C-u>CocList diagnostics<cr>
+" nnoremap <silent><nowait> <LocalLeader>e  :<C-u>CocList extensions<cr>
+" nnoremap <silent><nowait> <LocalLeader>c  :<C-u>CocList commands<cr>
+" nnoremap <silent><nowait> <LocalLeader>o  :<C-u>CocList outline<cr>
+" nnoremap <silent><nowait> <LocalLeader>s  :<C-u>CocList -I symbols<cr>
+" nnoremap <silent><nowait> <LocalLeader>j  :<C-u>CocNext<CR>
+" nnoremap <silent><nowait> <LocalLeader>k  :<C-u>CocPrev<CR>
+" nnoremap <silent><nowait> <LocalLeader>p  :<C-u>CocListResume<CR>
+"
 " nmap <silent> gd <Plug>(coc-definition)
 " nmap <silent> gy <Plug>(coc-type-definition)
 " nmap <silent> gi <Plug>(coc-implementation)
 " nmap <silent> gr <Plug>(coc-references)
-
-nmap <LocalLeader>rn <Plug>(coc-rename)
-
-xmap <LocalLeader>f <Plug>(coc-format-selected)
-nmap <LocalLeader>f <Plug>(coc-format-selected)
-xmap <LocalLeader>a <Plug>(coc-codeaction-selected)
-nmap <LocalLeader>a <Plug>(coc-codeaction-selected)
-nmap <LocalLeader>ac <Plug>(coc-codeaction)
-nmap <LocalLeader>qf <Plug>(coc-fix-current)
+"
+" nmap <LocalLeader>n <Plug>(coc-rename)
+"
+" xmap <LocalLeader>f <Plug>(coc-format-selected)
+" nmap <LocalLeader>f <Plug>(coc-format-selected)
+" xmap <LocalLeader>a <Plug>(coc-codeaction-selected)
+" nmap <LocalLeader>a <Plug>(coc-codeaction-selected)
+" nmap <LocalLeader>ac <Plug>(coc-codeaction)
+" nmap <LocalLeader>qf <Plug>(coc-fix-current)
 
 nnoremap <silent> <LocalLeader>H :call <SID>show_documentation()<CR>
 
