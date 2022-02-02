@@ -96,39 +96,3 @@ if has('nvim')
     Plug 'pbrisbin/vim-syntax-shakespeare'
   call plug#end()
 endif
-
-" Conqueror of Completion
-" nnoremap <silent><nowait> <LocalLeader>d  :<C-u>CocList diagnostics<cr>
-" nnoremap <silent><nowait> <LocalLeader>e  :<C-u>CocList extensions<cr>
-" nnoremap <silent><nowait> <LocalLeader>c  :<C-u>CocList commands<cr>
-" nnoremap <silent><nowait> <LocalLeader>o  :<C-u>CocList outline<cr>
-" nnoremap <silent><nowait> <LocalLeader>s  :<C-u>CocList -I symbols<cr>
-" nnoremap <silent><nowait> <LocalLeader>j  :<C-u>CocNext<CR>
-" nnoremap <silent><nowait> <LocalLeader>k  :<C-u>CocPrev<CR>
-" nnoremap <silent><nowait> <LocalLeader>p  :<C-u>CocListResume<CR>
-"
-" nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
-"
-" nmap <LocalLeader>n <Plug>(coc-rename)
-"
-" xmap <LocalLeader>f <Plug>(coc-format-selected)
-" nmap <LocalLeader>f <Plug>(coc-format-selected)
-" xmap <LocalLeader>a <Plug>(coc-codeaction-selected)
-" nmap <LocalLeader>a <Plug>(coc-codeaction-selected)
-" nmap <LocalLeader>ac <Plug>(coc-codeaction)
-" nmap <LocalLeader>qf <Plug>(coc-fix-current)
-
-nnoremap <silent> <LocalLeader>H :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
