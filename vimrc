@@ -31,6 +31,7 @@ if has('nvim')
   augroup nvimrc
     autocmd!
     autocmd TermOpen * startinsert
+    autocmd BufEnter term://* startinsert
   augroup END
 endif
 
