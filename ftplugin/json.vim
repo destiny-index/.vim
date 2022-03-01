@@ -1,1 +1,1 @@
-set formatprg=python3\ -m\ json.tool
+setlocal formatprg=python3\ -m\ json.tool
