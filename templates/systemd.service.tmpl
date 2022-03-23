@@ -1,0 +1,8 @@
+[Unit]
+Description=A bluetooth OBEX server
+
+[Service]
+ExecStart=/usr/bin/bt-obex --server $HOME/Downloads --auto-accept
+
+[Install]
+WantedBy=bluetooth.target
