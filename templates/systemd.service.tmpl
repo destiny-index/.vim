@@ -1,8 +1,8 @@
 [Unit]
-Description=A bluetooth OBEX server
+Description=A privacy respecting, hackable metasearch engine
 
 [Service]
-ExecStart=/usr/bin/bt-obex --server $HOME/Downloads --auto-accept
+ExecStart=/usr/bin/searx-run
 
 [Install]
-WantedBy=bluetooth.target
+WantedBy=default.target
