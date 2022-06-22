@@ -95,5 +95,20 @@ if has('nvim')
     Plug 'sheerun/vim-polyglot'
     Plug 'tpope/vim-fugitive'
     Plug 'pbrisbin/vim-syntax-shakespeare'
+    Plug 'habamax/vim-godot'
   call plug#end()
 endif
+
+func! GodotSettings() abort
+    " setlocal foldmethod=expr
+    nnoremap <buffer> <F4> :GodotRunLast<CR>
+    nnoremap <buffer> <F5> :GodotRun<CR>
+    nnoremap <buffer> <F6> :GodotRunCurrent<CR>
+    nnoremap <buffer> <F7> :GodotRunFZF<CR>
+endfunc
+augroup godot | au!
+    au FileType gdscript call GodotSettings()
+    au FileType gdscript call conqueror#bind_keys()
+augroup end
+
+let g:godot_executable = 'godot3'
